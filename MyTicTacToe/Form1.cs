@@ -14,7 +14,7 @@ namespace MyTicTacToe
     {
         bool turn = true;
         int turn_count = 0;
-
+         
 
         int N_side = 3;
         int N = 9;
