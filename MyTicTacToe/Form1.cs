@@ -23,7 +23,7 @@ namespace MyTicTacToe
         String player_2 = "Player 2 ";
         String Symbol = "";
 
-        /*
+        /*     
         private Button[,] btn = new Button[,]
             {
                 { A1, A2, A3 },
