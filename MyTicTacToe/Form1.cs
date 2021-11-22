@@ -23,6 +23,10 @@ namespace MyTicTacToe
         String player_2 = "Player 2 ";
         String Symbol = "";
 
+        int player_1_Score = 0;
+        int player_2_Score = 0;
+
+
         /*     
         private Button[,] btn = new Button[,]
             {
@@ -31,7 +35,7 @@ namespace MyTicTacToe
                 { C1, C2,  C3}
             };
         // */
-            
+
 
         public Form1()
         {
@@ -46,6 +50,9 @@ namespace MyTicTacToe
         //*
         private void initiator()
         {
+            player_1_Score_lbl.Text = player_1 + " Score: " + player_1_Score;
+            player_2_Score_lbl.Text = player_2 + " Score: " + player_2_Score;
+
             Symbol = "X";
             playersTurnLabel.Text = player_1 + " - " + Symbol;
         }
@@ -102,11 +109,13 @@ namespace MyTicTacToe
                 {
                     winner = "O";
                     playersTurnLabel.Text = player_2 + "Wins!";
+                    player_2_Score++;
                 }
                 else
                 {
                     winner = "X";
                     playersTurnLabel.Text = player_1 + "Wins!";
+                    player_1_Score++;
                 }
                 MessageBox.Show(winner + " Wins!", "Result");
             }
@@ -118,6 +127,9 @@ namespace MyTicTacToe
                     MessageBox.Show("Draw!", "Result");
                 }
             }
+
+            player_1_Score_lbl.Text = player_1 + " Score: " + player_1_Score;
+            player_2_Score_lbl.Text = player_2 + " Score: " + player_2_Score;
         }
 
 
